@@ -1,0 +1,32 @@
+
+<!doctype html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>DevStart • Cursos Online</title>
+  <link rel="stylesheet" href="/css/estilos.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="site-header__bar">
+      <div class="brand">
+        <img class="brand__logo" src="/img/devstart-logo.svg" alt="DevStart" />
+        <span class="brand__name">DevStart • Cursos Online</span>
+      </div>
+
+      <form action="/logout" method="post" aria-label="Sair">
+        <button class="btn btn--outline" type="submit">Sair</button>
+      </form>
+    </div>
+  </header>
+  <main class="container">
+    <div id="conteudo" aria-live="polite"></div>
+  </main>
+  <footer class="site-footer">
+    <div class="container">© 2025 — DevStart</div>
+  </footer>
+
+  <script src="/js/curso.js" defer></script>
+</body>
+</html>
