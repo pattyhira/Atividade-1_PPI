@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Login • DevStart</title>
+  <link rel="stylesheet" href="/css/estilos.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="site-header__bar">
+      <div class="brand">
+        <img class="brand__logo" src="/img/devstart-logo.svg" alt="DevStart" />
+        <span class="brand__name">DevStart</span>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <form class="form" method="post" action="/login">
+      <h2 style="margin:0 0 12px">Entrar</h2>
+      <div id="msg"></div>
+
+      <div class="field">
+        <label class="label" for="usuario">Usuário</label>
+        <input class="input" id="usuario" name="usuario" placeholder="Digite o usuário" required />
+      </div>
+
+      <div class="field">
+        <label class="label" for="senha">Senha</label>
+        <input class="input" id="senha" name="senha" type="password" placeholder="Digite a senha" required />
+        
+      </div>
+
+      <button class="btn btn--primary btn--block" type="submit">Acessar</button>
+      <p class="mt-3"><a href="/index.html">← Voltar para a Home</a></p>
+    </form>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">© 2025 — DevStart</div>
+  </footer>
+
+  <script>
+    const qs = new URLSearchParams(location.search);
+    const msg = document.getElementById('msg');
+    if (qs.get('erro'))   msg.innerHTML = '<div class="alert alert--error">Usuário ou senha inválidos.</div>';
+    if (qs.get('logout')) msg.innerHTML = '<div class="alert alert--info">Sessão encerrada com sucesso.</div>';
+  </script>
+</body>
+</html>
